@@ -5,14 +5,14 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Test {
-	@Transactional(rollbackFor=Exception.class)
-	public ResultEntity importSalesOrderByExcel(InputStream inputStream,HttpServletRequest httpRequest) throws ServiceException, UtilException {
+//	@Transactional(rollbackFor=Exception.class)
+//	public ResultEntity importSalesOrderByExcel(InputStream inputStream,HttpServletRequest httpRequest) throws ServiceException, UtilException {
 		XSSFWorkbook workbook;
-		ExcelReader<SalesOrderExcel> reader;
-		List<SalesOrderExcel> salesOrders=null;
+//		ExcelReader<SalesOrderExcel> reader;
+//		List<SalesOrderExcel> salesOrders=null;
 		try {
 			workbook = new XSSFWorkbook(inputStream);
 			reader = new ExcelReader<SalesOrderExcel>(SalesOrderExcel.class,new DefaultSheet(workbook.getSheetAt(0)));
