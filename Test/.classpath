@@ -6,5 +6,7 @@
 	<classpathentry kind="lib" path="poi-3.10.1-sources.jar"/>
 	<classpathentry kind="lib" path="poi-3.10.1.jar"/>
 	<classpathentry kind="lib" path="poi-ooxml-3.10-FINAL.jar"/>
+	<classpathentry kind="lib" path="asm-3.3.jar"/>
+	<classpathentry kind="lib" path="cglib-2.2.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
