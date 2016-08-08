@@ -10,5 +10,6 @@
 	<classpathentry kind="lib" path="cglib-2.2.2.jar"/>
 	<classpathentry kind="lib" path="jedis-2.1.0-sources.jar"/>
 	<classpathentry kind="lib" path="jedis-2.9.0.jar"/>
+	<classpathentry kind="lib" path="jedis-2.9.0-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
