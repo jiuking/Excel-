@@ -6,8 +6,10 @@ public class Solution {
 		ListNode lastList = new ListNode(0);
 		ListNode ret = new ListNode(0);
 		while(l1 != null && l2 != null){
+			ret = new ListNode(0);
 			ret.val = (l1.val + l2.val)%10;
-			ret.next = new ListNode(0);
+			ret.next = ret;//new ListNode(0);
+			lastList = ret;
 			l1 = l1.next;
 			l2 = l2.next;
 		}
