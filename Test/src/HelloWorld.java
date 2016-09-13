@@ -1,5 +1,5 @@
 class Super{
-    
+	
     static{
     	m = 22;
         System.out.println("÷¥––¡Àsuper¿‡æ≤Ã¨”Ôæ‰øÈ");
@@ -23,5 +23,6 @@ public class HelloWorld {
 	public static void main(String[] args){
 		System.out.println(Child.m);
 		System.out.println("Hello World!");
+		
 	}
 }
