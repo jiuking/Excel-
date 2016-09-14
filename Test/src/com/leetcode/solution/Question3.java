@@ -18,7 +18,7 @@ public class Question3 {
 	        int end = s.length() - 1;
 	        int max = 0;
 	        for(int i = 1;i<s.length();i++){
-	            if(s.substring(start,i).contains(s.substring(i,i+1))){
+	            if(s.substring(start,i).contains(s.substring(i,i+1))){//ÐÞ¸ÄÎªindexOf == -1
 	                max = i - start;
 	                start = i;
 	            }
@@ -52,7 +52,7 @@ public class Question3 {
 		return maxLen;
 	}*/
 	public static void main(String[] args){
-		String s = "abcabcbc";//"bbbb";aabc;abcabcbb
+		String s = "abcabc";//"bbbb";aabc;abcabcbb;dvdf
 		System.out.println(new Question3().lengthOfLongestSubstring(s));
 	}
 }
