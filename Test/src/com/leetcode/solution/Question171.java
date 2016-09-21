@@ -13,13 +13,17 @@ AA -> 27
 AB -> 28 
 */
 public class Question171 {
-
+ 
 	public int titleToNumber(String s) {
 		if(s == null || s.isEmpty()) return 0;
-		int result = 1;
+		int result = 0;
 		int length = s.length();
 		for(int i = 0;i<s.length();i++){
-			result += (s.charAt(i)-64) * (length-1)*26; 
+			if(length == 1){
+				result += s.charAt(i) -64;
+			}else{
+				result += (s.charAt(i)-64) * length*26; 
+			}
 			length--;
 		}
 		return result;
