@@ -22,7 +22,8 @@ public class Question171 {
 			if(length == 1){
 				result += s.charAt(i) -64;
 			}else{
-				result += (s.charAt(i)-64) * length*26; 
+				
+				result += (s.charAt(i) -64)*(int)Math.pow(26,(length-1)); 
 			}
 			length--;
 		}
@@ -30,8 +31,9 @@ public class Question171 {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(new Question171().titleToNumber("AB"));
+		System.out.println(new Question171().titleToNumber("BA"));
 //		System.out.println('A'-64);
+//		System.out.println((int)Math.pow(26, 2));
 	}
 
 }
