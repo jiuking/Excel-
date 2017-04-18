@@ -50,7 +50,7 @@ public class GetEmail {
     // 获得收件箱 
     Folder folder = store.getFolder("INBOX"); 
     // 以读写模式打开收件箱 
-    folder.open(Folder.READ_WRITE); 
+    folder.open(Folder.READ_ONLY); 
      
     // 获得收件箱的邮件列表 
     Message[] messages = folder.getMessages(); 

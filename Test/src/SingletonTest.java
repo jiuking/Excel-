@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class SingletonTest {
 	private SingletonTest(){
@@ -15,6 +18,11 @@ public class SingletonTest {
 			System.out.println(s.eval());
 			System.out.println(s.getName());
 //			System.out.println(s.ordinal());
+		}
+		
+		List<HashMap> map = new ArrayList<>();
+		for(HashMap map1 : map){
+			System.out.println("asdf");
 		}
 	}
 }

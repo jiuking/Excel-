@@ -101,7 +101,7 @@ public class ReadEmail {
 		return result.toArray();
 	}
 	
-	public void main(){//本地无问题，但服务器上报错问题，报证书不存在，解决办法 javax.mail 升级到1.5.6版本。
+	public void main(){//本地无问题，但服务器上报错问题，报证书不存在，看官方文档，解决办法 javax.mail 升级到1.5.6版本。
 		Map<String, String> mailMap = new HashMap<String, String>();
         String config = "host:imap.bravowhale.com,port:993,username:huangjingcheng@bravowhale.com,password:DfJ2ndo4kE,useSSL:true";
         for (String pair : config.split(",")) {

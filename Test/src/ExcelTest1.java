@@ -1,4 +1,8 @@
 import java.io.FileOutputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
@@ -12,7 +16,7 @@ import org.apache.poi.ss.util.CellRangeAddress;
 
 public class ExcelTest1 {
 	
-	public static void main(String[] args){
+	public static void main(String[] args)throws Exception{
 		// 第一步，创建一个webbook，对应一个Excel文件  
 	    HSSFWorkbook wb = new HSSFWorkbook();  
 	    // 第二步，在webbook中添加一个sheet,对应Excel文件中的sheet  
@@ -74,7 +78,33 @@ public class ExcelTest1 {
 //	    HSSFCellStyle titleStyle = wb.createCellStyle();  
 	    //设置边框
 //	    setBorder(wb,sheet);
-	    try  
+    	Date date = new Date();
+    	String birth = "1991-04-13";
+    	
+    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    	
+      	SimpleDateFormat sdf1 = new SimpleDateFormat("yyyyMMdd");
+       	Date d1 = sdf1.parse("513029199102213255".substring(6, 14));
+    	
+//    	Date d1 = sdf.parse(birth);
+    	Date d2 = date;
+    	Calendar c1 = Calendar.getInstance();
+    	Calendar c2 = Calendar.getInstance();
+    	c1.setTime(d1);
+    	c2.setTime(d2);
+    	int a = c2.get(Calendar.YEAR) - c1.get(Calendar.YEAR);
+    	int b = c2.get(Calendar.MONTH) - c1.get(Calendar.MONTH);
+    	int c = c2.get(Calendar.DAY_OF_MONTH) - c1.get(Calendar.DAY_OF_MONTH);
+    	if(b > 0)
+    		a += 1;
+    	else if(b == 0 && c >0)
+    		a += 1;
+    	System.out.println(a+"---"+b+"----"+c);
+       	System.out.println(sdf.format(date));
+       	System.out.println(sdf1.format(d1));
+//       	SimpleDateFormat sdf1 = new SimpleDateFormat("yyyyMMdd");
+//       	System.out.println(sdf1.parse("513029199012313255".substring(6, 14)));
+	    /*try  
 	    {  
 	        FileOutputStream fout = new FileOutputStream("E:/students1.xls");  
 	        wb.write(fout);  
@@ -83,8 +113,22 @@ public class ExcelTest1 {
 	    catch (Exception e)  
 	    {  
 	        e.printStackTrace();  
-	    }  
+	    }  */
 	}
+	
+	private int getAgeByBirthDay(Date birth)throws ParseException{
+		Date now = new Date();
+    	Calendar birthCal = Calendar.getInstance();
+    	Calendar nowCal = Calendar.getInstance();
+    	birthCal.setTime(birth);
+    	nowCal.setTime(now);
+    	int year = nowCal.get(Calendar.YEAR) - birthCal.get(Calendar.YEAR);
+    	int month = nowCal.get(Calendar.MONTH) - birthCal.get(Calendar.MONTH);
+    	int day = nowCal.get(Calendar.DAY_OF_MONTH) - birthCal.get(Calendar.DAY_OF_MONTH);
+    	
+		return 1;
+	}
+	
 	//设置标题
 	static void setDefaultTitle(HSSFSheet sheet,HSSFWorkbook wb){
 		//标题

@@ -1,4 +1,4 @@
-package com.annotation.test;
+/*package com.annotation.test;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -72,3 +72,4 @@ public class Test {
 		return new ResultEntityHashMapImpl(ResultEntity.KW_STATUS_SUCCESS, "上传成功");
 	}
 }
+*/
