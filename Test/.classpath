@@ -4,12 +4,14 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="poi-ooxml-schemas-3.10-FINAL.jar"/>
 	<classpathentry kind="lib" path="poi-3.10.1-sources.jar"/>
-	<classpathentry kind="lib" path="poi-3.10.1.jar"/>
+	<classpathentry kind="lib" path="poi-3.10.1.jar" sourcepath="e:/.m2/repository/org/apache/poi/poi/3.10.1/poi-3.10.1-sources.jar"/>
 	<classpathentry kind="lib" path="poi-ooxml-3.10-FINAL.jar"/>
 	<classpathentry kind="lib" path="asm-3.3.jar"/>
 	<classpathentry kind="lib" path="cglib-2.2.2.jar"/>
 	<classpathentry kind="lib" path="jedis-2.1.0-sources.jar"/>
 	<classpathentry kind="lib" path="jedis-2.9.0.jar"/>
 	<classpathentry kind="lib" path="jedis-2.9.0-sources.jar"/>
+	<classpathentry kind="lib" path="javax.mail-1.5.2.jar" sourcepath="e:/.m2/repository/com/sun/mail/javax.mail/1.5.2/javax.mail-1.5.2-sources.jar"/>
+	<classpathentry kind="lib" path="cgnb-core-pass.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
